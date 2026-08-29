@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+st.set_page_config(
+    page_title="India Forecast Confidence System",
+    page_icon="🌦️",
+    layout="wide"
+)
 
 # ==============================
 # PAGE SETTINGS
@@ -104,10 +109,7 @@ h1, h2, h3 {
 # YOUR EXISTING CODE STARTS HERE
 # ==============================
 
-st.set_page_config(
-    page_title="India Forecast Confidence System",
-    layout="wide"
-)
+
 
 # rest of your app.py...
 
