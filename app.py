@@ -29,6 +29,39 @@ st.markdown("""
         #F6F2FF 100%
     );
 }
+@media (max-width: 768px) {
+
+    .block-container {
+        padding-top: 1rem;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    div[data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap;
+    }
+
+    div[data-testid="stMetric"] {
+        margin-bottom: 10px;
+    }
+
+    .stPlotlyChart {
+        width: 100% !important;
+    }
+}
 
 [data-testid="stSidebar"] h1,
 [data-testid="stSidebar"] h2,
