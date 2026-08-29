@@ -63,6 +63,12 @@ NWP / GFS Weather Data
           ↓
    Machine Learning
           ↓
+
+## Installation
+git clone https://github.com/rohitsurya3010/Repository-name-india-weather-forecast.git
+cd Repository-name-india-weather-forecast
+pip install -r requirements.txt
+streamlit run app.py
  Forecast Confidence Analysis
           ↓
    Interactive Dashboard
