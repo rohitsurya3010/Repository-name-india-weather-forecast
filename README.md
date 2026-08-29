@@ -1,46 +1,99 @@
-# 🌦️ India Forecast Confidence System
+# India Forecast Confidence System
 
-An interactive weather forecasting and forecast-confidence analysis platform designed to visualize weather predictions for India using NWP/GFS forecast data and machine learning.
+An interactive weather forecasting and forecast-confidence analysis dashboard for India using GFS weather forecasts, historical forecast errors, machine learning, and a Forecast Stress Score.
 
-##  Project Overview
+## Project Overview
 
-The India Forecast Confidence System provides an interactive dashboard for analyzing weather forecasts and understanding the reliability of predicted weather conditions.
+The India Forecast Confidence System is a Streamlit-based dashboard designed to analyze weather forecast reliability across India.
 
-The system combines numerical weather prediction (NWP) data, GFS forecast data, data analysis, visualization, and machine learning to present forecast results through a user-friendly web dashboard.
+The system processes forecast results and provides an interactive interface to explore forecast-bust probability, forecast stress, temperature, rainfall, confidence levels, and risk factors for different forecast lead days and Indian states.
 
 ## Objectives
 
-- Analyze weather forecast data for India
-- Visualize forecast conditions interactively
+- Analyze weather forecast information for India
+- Estimate forecast-bust probability
 - Evaluate forecast confidence
-- Identify potential forecast errors or "forecast busts"
-- Present weather information through an interactive dashboard
-- Provide a mobile-friendly interface for easier access
+- Analyze forecast stress across states
+- Visualize weather forecast risk
+- Compare forecast risk across different lead days
+- Provide downloadable forecast results
 
 ## Key Features
 
--  India weather forecast visualization
--  Interactive forecast dashboard
--  Forecast trend analysis
--  Forecast confidence analysis
--  Machine-learning-based forecast bust detection
--  Interactive weather visualization
+- India weather forecast analysis
+- Forecast-bust probability
+- Forecast Stress Score
+- Temperature analysis
+- Rainfall analysis
+- Interactive India Forecast Stress Map
+- Forecast Risk Analysis
+- 10-Day Bust Probability Trend
+- Highest-Risk State identification
+- Forecast result CSV download
 - Mobile-friendly dashboard
--  Multi-day forecast analysis
 
-## Machine Learning
+## Methodology
 
-The project uses machine learning techniques to analyze forecast behavior and identify situations where the forecast may significantly deviate from expected conditions.
+The system combines:
 
-The trained model is integrated into the dashboard to support forecast-confidence and forecast-bust analysis.
+- GFS weather forecast information
+- Historical forecast errors
+- Machine learning
+- Forecast Stress Score
+- Forecast confidence analysis
 
-##  Data Sources
+The dashboard uses these results to identify potentially high-risk forecast conditions and present them in an interactive format.
 
-The system works with Numerical Weather Prediction (NWP) and Global Forecast System (GFS) forecast data.
+## Dashboard Components
 
-The processed forecast data is used for analysis, visualization, and machine-learning-based evaluation.
+### Forecast Controls
 
-##  Technologies Used
+Users can select:
+
+- Forecast Lead Day
+- Indian State
+- All India
+
+### Key Performance Indicators
+
+The dashboard displays:
+
+- Bust Probability
+- Forecast Stress
+- Temperature
+- Rainfall
+
+### Forecast Stress Map
+
+An interactive map displays forecast stress across India.
+
+The visualization represents:
+
+- State location
+- Forecast stress
+- Bust probability
+- Forecast confidence
+- Rainfall
+- Temperature
+- Wind speed
+
+### Forecast Risk Analysis
+
+An interactive chart compares forecast-bust probability and forecast stress across states.
+
+### 10-Day Bust Probability Trend
+
+The dashboard displays the average predicted bust probability across forecast lead days.
+
+### High-Risk States
+
+The system identifies states with the highest predicted forecast-bust probability.
+
+### Forecast Results Download
+
+Users can download filtered forecast results as a CSV file.
+
+## Technologies Used
 
 - Python
 - Streamlit
@@ -49,28 +102,46 @@ The processed forecast data is used for analysis, visualization, and machine-lea
 - Plotly
 - Scikit-learn
 - Joblib
-- NWP / GFS Weather Data
+- GFS Weather Forecast Data
 - Machine Learning
 
-##  System Architecture
+## Data
+
+The main processed dataset used by the dashboard is:
+
+`FINAL_FORECAST_RESULTS.csv`
+
+The application uses forecast-related fields including:
+
+- Forecast lead day
+- State
+- Bust probability
+- Stress score
+- Confidence
+- Rainfall
+- Temperature
+- Wind speed
+- Risk reasons
+
+## System Workflow
 
 ```text
-NWP / GFS Weather Data
-          ↓
-     Data Processing
-          ↓
-   Feature Preparation
-          ↓
-   Machine Learning
-          ↓
-
-## Installation
-git clone https://github.com/rohitsurya3010/Repository-name-india-weather-forecast.git
-cd Repository-name-india-weather-forecast
-pip install -r requirements.txt
-streamlit run app.py
- Forecast Confidence Analysis
-          ↓
-   Interactive Dashboard
-          ↓
-      User Interface
+GFS Weather Forecast Data
+            |
+            v
+Historical Forecast Analysis
+            |
+            v
+Feature Processing
+            |
+            v
+Machine Learning
+            |
+            v
+Forecast-Bust Probability
+            |
+            v
+Forecast Stress and Confidence
+            |
+            v
+Interactive Streamlit Dashboard
